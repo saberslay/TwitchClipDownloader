@@ -15,7 +15,7 @@ namespace Twitch_Clip_Downloader {
 
         private async void button1_Click(object sender, EventArgs e) {
 
-            if (TB.Text == null) {
+            if (TB.Text != null) {
                 string[] lines = File.ReadAllLines($@"{CurrentPath}\{TB.Text}_clips.txt");
 
                 //if (!Directory.Exists(Path.Combine(CurrentPath, "Twitch Clips"))) {
