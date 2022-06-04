@@ -17,11 +17,10 @@ namespace Twitch_Clip_Downloader {
 
             if (TB.Text == null) {
                 string[] lines = File.ReadAllLines($@"{CurrentPath}\{TB.Text}_clips.txt");
-                string url = lines.ToString();
 
-                if (!Directory.Exists(Path.Combine(CurrentPath, "Twitch Clips"))) {
-                    Directory.CreateDirectory(Path.Combine(CurrentPath, "Twitch Clips"));
-                }
+                //if (!Directory.Exists(Path.Combine(CurrentPath, "Twitch Clips"))) {
+                //    Directory.CreateDirectory(Path.Combine(CurrentPath, "Twitch Clips"));
+                //}
 
                 foreach (var _url in lines) {
                    await client.DownloadFileTaskAsync(_url, $@"Twitch Clip " + _Count + ".mp4");
@@ -49,8 +48,13 @@ namespace Twitch_Clip_Downloader {
             }));
         }
 
-        private void LL_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
+        private void twitchClipsToolStripMenuItem_Click(object sender, EventArgs e) {
             System.Diagnostics.Process.Start("https://www.twitchanz.com/clips/");
+
+        }
+
+        private void githubToolStripMenuItem_Click(object sender, EventArgs e) {
+            System.Diagnostics.Process.Start("https://github.com/saberslay/TwitchClipDownloader");
         }
     }
 }

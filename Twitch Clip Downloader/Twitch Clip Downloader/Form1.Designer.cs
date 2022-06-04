@@ -34,13 +34,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.LB = new System.Windows.Forms.Label();
             this.TB = new System.Windows.Forms.TextBox();
-            this.LL = new System.Windows.Forms.LinkLabel();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.githubToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.twitchClipsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(367, 224);
+            this.button1.Location = new System.Drawing.Point(367, 66);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(92, 23);
             this.button1.TabIndex = 0;
@@ -52,7 +56,7 @@
             // 
             this.PB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.PB.Location = new System.Drawing.Point(12, 224);
+            this.PB.Location = new System.Drawing.Point(12, 66);
             this.PB.Name = "PB";
             this.PB.Size = new System.Drawing.Size(349, 23);
             this.PB.TabIndex = 1;
@@ -61,7 +65,7 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 195);
+            this.label1.Location = new System.Drawing.Point(12, 37);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 13);
             this.label1.TabIndex = 2;
@@ -70,7 +74,7 @@
             // LB
             // 
             this.LB.AutoSize = true;
-            this.LB.Location = new System.Drawing.Point(12, 9);
+            this.LB.Location = new System.Drawing.Point(364, 24);
             this.LB.Name = "LB";
             this.LB.Size = new System.Drawing.Size(92, 13);
             this.LB.TabIndex = 3;
@@ -78,37 +82,62 @@
             // 
             // TB
             // 
-            this.TB.Location = new System.Drawing.Point(12, 25);
+            this.TB.Location = new System.Drawing.Point(364, 40);
             this.TB.Name = "TB";
             this.TB.Size = new System.Drawing.Size(100, 20);
             this.TB.TabIndex = 4;
             // 
-            // LL
+            // menuStrip1
             // 
-            this.LL.AutoSize = true;
-            this.LL.Location = new System.Drawing.Point(396, 9);
-            this.LL.Name = "LL";
-            this.LL.Size = new System.Drawing.Size(63, 13);
-            this.LL.TabIndex = 5;
-            this.LL.TabStop = true;
-            this.LL.Text = "Twitch clips";
-            this.LL.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LL_LinkClicked);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutToolStripMenuItem,
+            this.twitchClipsToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(471, 24);
+            this.menuStrip1.TabIndex = 6;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.githubToolStripMenuItem});
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+            this.aboutToolStripMenuItem.Text = "About";
+            // 
+            // githubToolStripMenuItem
+            // 
+            this.githubToolStripMenuItem.Name = "githubToolStripMenuItem";
+            this.githubToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.githubToolStripMenuItem.Text = "Github";
+            this.githubToolStripMenuItem.Click += new System.EventHandler(this.githubToolStripMenuItem_Click);
+            // 
+            // twitchClipsToolStripMenuItem
+            // 
+            this.twitchClipsToolStripMenuItem.Name = "twitchClipsToolStripMenuItem";
+            this.twitchClipsToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
+            this.twitchClipsToolStripMenuItem.Text = "Twitch Clips";
+            this.twitchClipsToolStripMenuItem.Click += new System.EventHandler(this.twitchClipsToolStripMenuItem_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(471, 259);
-            this.Controls.Add(this.LL);
+            this.ClientSize = new System.Drawing.Size(471, 101);
             this.Controls.Add(this.TB);
             this.Controls.Add(this.LB);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.PB);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Text = "Twitch Clip Downloader";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -122,7 +151,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label LB;
         private System.Windows.Forms.TextBox TB;
-        private System.Windows.Forms.LinkLabel LL;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem githubToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem twitchClipsToolStripMenuItem;
     }
 }
 
