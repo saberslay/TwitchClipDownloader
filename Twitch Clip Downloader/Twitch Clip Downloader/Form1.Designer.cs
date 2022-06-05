@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.button1 = new System.Windows.Forms.Button();
             this.PB = new System.Windows.Forms.ProgressBar();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
@@ -44,7 +45,7 @@
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(367, 66);
+            this.button1.Location = new System.Drawing.Point(257, 67);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(92, 23);
             this.button1.TabIndex = 0;
@@ -56,16 +57,16 @@
             // 
             this.PB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.PB.Location = new System.Drawing.Point(12, 66);
+            this.PB.Location = new System.Drawing.Point(12, 67);
             this.PB.Name = "PB";
-            this.PB.Size = new System.Drawing.Size(349, 23);
+            this.PB.Size = new System.Drawing.Size(239, 23);
             this.PB.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 37);
+            this.label1.Location = new System.Drawing.Point(12, 38);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 13);
             this.label1.TabIndex = 2;
@@ -73,8 +74,9 @@
             // 
             // LB
             // 
+            this.LB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.LB.AutoSize = true;
-            this.LB.Location = new System.Drawing.Point(364, 24);
+            this.LB.Location = new System.Drawing.Point(254, 24);
             this.LB.Name = "LB";
             this.LB.Size = new System.Drawing.Size(92, 13);
             this.LB.TabIndex = 3;
@@ -82,7 +84,8 @@
             // 
             // TB
             // 
-            this.TB.Location = new System.Drawing.Point(364, 40);
+            this.TB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.TB.Location = new System.Drawing.Point(254, 40);
             this.TB.Name = "TB";
             this.TB.Size = new System.Drawing.Size(100, 20);
             this.TB.TabIndex = 4;
@@ -94,7 +97,7 @@
             this.twitchClipsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(471, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(361, 24);
             this.menuStrip1.TabIndex = 6;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -116,22 +119,24 @@
             // twitchClipsToolStripMenuItem
             // 
             this.twitchClipsToolStripMenuItem.Name = "twitchClipsToolStripMenuItem";
-            this.twitchClipsToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
-            this.twitchClipsToolStripMenuItem.Text = "Twitch Clips";
+            this.twitchClipsToolStripMenuItem.Size = new System.Drawing.Size(144, 20);
+            this.twitchClipsToolStripMenuItem.Text = "ANZ Streamer Directory";
             this.twitchClipsToolStripMenuItem.Click += new System.EventHandler(this.twitchClipsToolStripMenuItem_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(471, 101);
+            this.ClientSize = new System.Drawing.Size(361, 102);
             this.Controls.Add(this.TB);
             this.Controls.Add(this.LB);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.PB);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
+            this.MinimumSize = new System.Drawing.Size(377, 141);
             this.Name = "Form1";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Text = "Twitch Clip Downloader";
