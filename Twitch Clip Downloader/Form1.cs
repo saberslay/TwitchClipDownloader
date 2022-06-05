@@ -17,7 +17,7 @@ namespace Twitch_Clip_Downloader {
 
             if (TB.Text != null) {
                 string[] lines = File.ReadAllLines($@"{CurrentPath}\{TB.Text}_clips.txt");
-
+                // To do put downloaded file in to folder
                 //if (!Directory.Exists(Path.Combine(CurrentPath, "Twitch Clips"))) {
                 //    Directory.CreateDirectory(Path.Combine(CurrentPath, "Twitch Clips"));
                 //}
